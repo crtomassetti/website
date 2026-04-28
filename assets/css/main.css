@@ -1,6 +1,17 @@
 /* MOBILE's FIRST - Custom properties */
 /* This classes will be then modified for bigger screens */
 
+body {
+    font-family: 'Georgia', serif;
+}
+
+#leftPanel i {
+    width: 20px;
+    margin-right: 8px;
+    color: #666;
+}
+
+
 #mowatave {
 	color: #2bd284 !important;
 	text-decoration: underline;
@@ -50,7 +61,7 @@ li > .active {
 }
 
 .lucida-console {
-	font-family: 'Lucida Console', monospace;
+	font-family: 'Georgia', serif;
 }
 
 /* NICOLAS MESEGUER CONTACT INFO - Related*/
@@ -173,62 +184,6 @@ li > .active {
     transition: background-color .5s; /* For modern browsers */
 }
 
-#lan {
-	height: 40px;
-    width: 40px;
-
-	bottom: 130px;
-	right: 30px;
-
-	font-size: 1em;
-
-	-webkit-transition: background-color .5s; /* For Safari 3.0 to 6.0 */
-    transition: background-color .5s; /* For modern browsers */
-}
-
-.lang-flag {
-	height: 15px;
-    width: 22.5px;
-	vertical-align:	0px;
-}
-
-/* BLOG - Related */
-.blog-info {
-	font-weight: 100;
-	width: 100%;
-	clear: both;
-	display: block;
-}
-
-.blog-short {
-	font-weight: 400;
-	font-size: 17px;
-}
-
-.blog-tags {
-	text-align: right;
-}
-
-.blog-tags > .tag {
-	border-radius: 100px;
-	padding: 4px;
-	font-size: 12px;
-	font-weight: 600;
-	box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
-	color: white;
-}
-
-.blog-tags > .t-purple {
-	background-color: rgb(137, 70, 255, 0.8);
-}
-
-.blog-tags > .t-lime {
-	background-color: rgba(118, 185, 0, 0.8);
-}
-
-.blog-tags > .t-sky {
-	background-color: rgba(37, 197, 223, 0.8);
-}
 
 .clickable {
 	border-radius: 20px;
