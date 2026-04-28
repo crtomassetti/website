@@ -13,21 +13,15 @@ $(document).ready(function(){
 
 	// Options menu is hidden by default
 	$('#theme').hide();
-	$('#lan').hide();
+	// $('#lan').hide();  // removed language toggle
 
 	// Handle 'About Me' content
 	$('#aboutme').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#aboutmeContent');
 		}
 
@@ -36,16 +30,10 @@ $(document).ready(function(){
 	// Handle 'Education' content
 	$('#education').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#educationContent');
 		}
 	});
@@ -53,16 +41,10 @@ $(document).ready(function(){
 	// Handle 'Publications' content
 	$('#publications').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#publicationsContent');
 		}
 	});
@@ -70,16 +52,10 @@ $(document).ready(function(){
 	// Handle 'Blog' content
 	$('#blog').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#blogContent');
 		}
 	});
@@ -87,16 +63,10 @@ $(document).ready(function(){
 	// Handle 'Academic' content
 	$('#academic').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#academicContent');
 		}
 	});
@@ -104,16 +74,10 @@ $(document).ready(function(){
 	// Handle 'Particular' content
 	$('#particular').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#particularContent');
 		}
 	});
@@ -121,16 +85,10 @@ $(document).ready(function(){
 	// Handle 'Conferences' content
 	$('#conferences').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#conferencesContent');
 		}
 	});
@@ -138,16 +96,10 @@ $(document).ready(function(){
 	// Handle 'Experience' content
 	$('#experience').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#experienceContent');
 		}
 	});
@@ -155,48 +107,21 @@ $(document).ready(function(){
 	// Handle 'Projects' content
 	$('#projects').click(function(e) {
 
-		// If the div has already the class active, no need to reload the divs...
 		if(!$(e.target).hasClass('active')) {
-			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
-
-			// Hide other contents
 			clearActiveDivs();
-
-			// Show current content
 			activateDiv('#projectsContent');
 		}
 	});
-
-
-	// Handle 'Photos' content
-	// $('#photos').click(function(e) {
-
-	// 	// If the div has already the class active, no need to reload the divs...
-	// 	if(!$(e.target).hasClass('active')) {
-	// 		// Update navbar
-	// 		clearActiveLinks();
-	// 		activateLink(e);
-
-	// 		// Hide other contents
-	// 		clearActiveDivs();
-
-	// 		// Show current content
-	// 		activateDiv('#photosContent');
-	// 	}
-	// });
 
 	// **************************** //
 	// Handles the Publications events
 	// **************************** //
 
-	// Copies the citation to the clipboard
 	$(document).on("click", "#citation", function(){
 		var text = $(this).parent().parent().next()[0].innerHTML;
-
 		navigator.clipboard.writeText(text);
-
 		toastr.success('Citation copied');
 	});
 
@@ -204,18 +129,14 @@ $(document).ready(function(){
 	// Handles the Blog events
 	// ******************** //
 
-	// Opens the blog post in a new tab
 	$('.clickable').click(function(e) {
 		window.open($(e.currentTarget)[0].childNodes[1].innerText, '_blank').focus();
 	});
 
-
 	// *************************** //
 	// Handle the rest of the content
-	// Omit this part if you don't have more content
 	// *************************** //
 	
-	// If the user has not selected a theme, then select the default one according to the user's preferences
 	if(localStorage.getItem("theme") === null){
 		localStorage.theme = "light";
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -240,17 +161,15 @@ $(document).ready(function(){
 		$('#theme').empty().append("<i class='fa-duotone fa-lightbulb-slash'></i>");
 	}
 
-	// Controls the option menu toggler to show/hide the language and theme selectors
+	// Controls the option menu toggler to show/hide the theme selector
 	$('#options-toggler').click(function(e) {
 		if(!$(e.currentTarget).hasClass('active')) {
 			$(e.currentTarget).addClass('active');
 			$('#theme').show("fast");
-			$('#lan').show("fast");
 		}
 		else {
 			$(e.currentTarget).removeClass('active');
 			$('#theme').hide("fast");
-			$('#lan').hide("fast");
 		}
 	})
 
@@ -258,7 +177,6 @@ $(document).ready(function(){
 	$('#theme').click(function(e) {
 		if(localStorage.theme != "dark"){
 			$('#theme').empty().append("<i class='fa-duotone fa-lightbulb-slash'></i>");
-
 			localStorage.theme = "dark"
 			
 			$("link[href='assets/css/light.css']").remove();
@@ -270,7 +188,6 @@ $(document).ready(function(){
 		}
 		else {
 			$('#theme').empty().append("<i class='fa-duotone fa-lightbulb'></i>");
-
 			localStorage.theme = "light"
 			
 			$("link[href='assets/css/dark.css']").remove();
@@ -282,15 +199,6 @@ $(document).ready(function(){
 		}
 	})
 
-	
-	// Create the language manager
-	const langManager = new LanguageManager();
-	
-	// Alternates between the different available languages
-	$('#lan').click(function() {
-        const newLang = langManager.getNextLanguage();
-        langManager.setLanguage(newLang);
-    });
 });
 
 // Clears the active links
@@ -312,7 +220,6 @@ function clearActiveDivs() {
 function activateLink(e) {
 	$(e.target).addClass('active');
 	
-	// Hide left panel
 	if(e.target.id == "particular")
 		$('#leftPanel').hide();
 	else
@@ -323,8 +230,6 @@ function activateLink(e) {
 function activateDiv(divId) {
 	$(divId).addClass('active');
 	$(divId).show();
-
-	// Scrolls to the content
 	scrollToContent(divId);
 }
 
