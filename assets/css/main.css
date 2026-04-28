@@ -258,3 +258,29 @@ li > .active {
 	border-radius: 10px;
 }
 
+.skill-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.skill-chip {
+	background: #f1f1f1;
+	padding: 5px 10px;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	white-space: nowrap;
+	border: 1px solid #e0e0e0;
+}
+
+.skill-chip:hover {
+	background: #e8e8e8;
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+.no-underline:hover {
+	text-decoration: underline;
+}
