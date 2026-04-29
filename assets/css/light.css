@@ -1,7 +1,18 @@
 :root {
 	--t-color: #000;
-
 	--bg-color: #fff;
+	--card-bg: #ffffff;
+    --card-border: #e6e6e6;
+    
+    --border-soft: #ddd;
+	
+	--text-main: #222;
+	--text-soft: #444;
+	--text-muted: #666;
+	--text-color: #222;
+
+	--card-bg: #fff;
+	--card-border: #e6e6e6;
 }
 
 body {
@@ -69,3 +80,5 @@ h1, h2, h3, h4, b {
 .academic-block {
 	border-left: 2px #22517d solid;
 }
+
+

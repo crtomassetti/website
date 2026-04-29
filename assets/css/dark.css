@@ -1,10 +1,20 @@
 :root {
-	--t-color: #D8DEE9;
-	--h-color: #ffff;
+	--t-color: #ffffff;
+	--h-color: #ffffff;
 
-	--bg-color: #383838;
+	--bg-color: #1e1e1e;
 	--nv-color: #121212;
+
+	--card-bg: #242424;
+	--card-border: #444;
+
+	--text-main: #ffffff;
+	--text-muted: #ffffff;
+
+	--chip-text: #ffffff;
+	--border-soft: #444;
 }
+
 
 body {
 	background-color: var(--bg-color);
@@ -17,6 +27,7 @@ h1, h2, h3, h4, b {
 
 #top-nav {
 	background-color: var(--nv-color) !important;
+	border-bottom: 1px solid #2a2a2a;
 }
 
 .nav-link {
@@ -77,3 +88,49 @@ h1, h2, h3, h4, b {
 .student-name {
 	color: #00FFC1;
 }
+
+
+.exp-item,
+.clickable,
+.pub-block {
+    background-color: #242424;
+    border-color: #444 !important;
+}
+
+.btn {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Your floating buttons */
+.options-button {
+    background-color: #2a2a2a;
+    border: 1px solid #666;
+    color: white;
+}
+
+.badge {
+    background-color: #333 !important;
+    color: #eee;
+}
+
+
+a {
+    color: #8ab4f8;
+}
+
+a:hover {
+    color: #a5c7ff;
+}
+
+p {
+    color: #d0d0d0;
+}
+
+
+
